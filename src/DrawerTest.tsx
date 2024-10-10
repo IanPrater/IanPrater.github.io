@@ -107,7 +107,7 @@ export default function ResponsiveDrawer() {
   ];
 
   const listElement = (list: ListItemList[]) => {
-    return list.map((item, index) => (
+    return list.map((item) => (
       <ListItem key={item.text} disablePadding>
         <ListItemButton>
           <ListItemIcon>
