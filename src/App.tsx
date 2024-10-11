@@ -31,6 +31,9 @@ import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
+import { useTheme } from '@mui/material';
+import { ThemeContext } from './providers/theme-provider';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -50,8 +53,19 @@ function Router(props: { children?: React.ReactNode }) {
 }
 
 export default function ResponsiveDrawer() {
+  const { themeMode, setThemeMode } = React.useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+  const theme = useTheme();
+
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setThemeMode(themeMode === 'light' ? 'dark' : 'light')
+      }
+    }),
+    [themeMode]
+  )
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -214,6 +228,10 @@ export default function ResponsiveDrawer() {
             <Typography variant="h6" noWrap component="div">
               Ian Prater
             </Typography>
+            <Box sx={{flexGrow: 1}}></Box>
+            <IconButton sx={{ml:1}} onClick={colorMode.toggleColorMode} color='inherit'>
+              {theme.palette.mode === 'dark' ? <Brightness7/> : <Brightness4/>}
+            </IconButton>
           </Toolbar>
         </AppBar>
         <Box
