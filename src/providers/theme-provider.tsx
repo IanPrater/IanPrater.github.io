@@ -7,7 +7,7 @@ declare module '@mui/material/styles' {
 
 export const ThemeContext = createContext({
   themeMode: 'light',
-  setThemeMode: (themeMode: 'light' | 'dark') => {}
+  setThemeMode: (themeMode: 'light' | 'dark') => {themeMode}
 });
 
 export function ThemeContextProvider({
