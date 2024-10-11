@@ -124,7 +124,7 @@ export default function ResponsiveDrawer() {
     {
       text: 'Domes',
       icon: <SchoolIcon/>,
-      route: '/'
+      route: 'http://75.81.136.146/Domes/'
     }
   ];
 
