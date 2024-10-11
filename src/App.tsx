@@ -3,7 +3,7 @@ import {
   Route,
   Routes,
   Link,
-  BrowserRouter
+  HashRouter
 } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 import AppBar from '@mui/material/AppBar';
@@ -46,7 +46,7 @@ function Router(props: { children?: React.ReactNode }) {
     return <StaticRouter location="/">{children}</StaticRouter>;
   }
 
-  return <BrowserRouter>{children}</BrowserRouter>;
+  return <HashRouter>{children}</HashRouter>;
 }
 
 export default function ResponsiveDrawer() {
