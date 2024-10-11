@@ -30,7 +30,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import Home from './pages/Home';
-import Profile from './pages/Profile';
 import Resume from './pages/Resume';
 
 const drawerWidth = 240;
@@ -258,7 +257,6 @@ export default function ResponsiveDrawer() {
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/profile/:username" element={<Profile />} />
               <Route path="/resume" element={<Resume />} />
             </Routes>
           </Box>
