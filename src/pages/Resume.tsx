@@ -1,5 +1,5 @@
 
-import { Box, colors, Fab, Link, Typography } from '@mui/material';
+import { Box, Fab, Link } from '@mui/material';
 import './resume.css'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
