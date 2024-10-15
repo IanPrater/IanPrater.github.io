@@ -14,7 +14,7 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
+import ListItemButton, { ListItemButtonProps } from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -25,13 +25,14 @@ import KitchenIcon from '@mui/icons-material/Kitchen';
 import RocketIcon from '@mui/icons-material/Rocket';
 import SchoolIcon from '@mui/icons-material/School';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
+import CodeIcon from '@mui/icons-material/Code';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
-import { useTheme } from '@mui/material';
+import { Collapse, useTheme } from '@mui/material';
 import { ThemeContext } from './providers/theme-provider';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import Projects from './pages/Projects';
@@ -39,7 +40,7 @@ import Game from './pages/Game';
 
 const drawerWidth = 240;
 
-interface ListItemList {
+interface ListItemList extends ListItemButtonProps{
   text: string,
   icon: JSX.Element,
   route: string
@@ -58,6 +59,8 @@ export default function ResponsiveDrawer() {
   const { themeMode, setThemeMode } = React.useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+  const [projectsOpen, setProjectsOpen] = React.useState(false);
+  const [gameProjectsOpen, setGameProjectsOpen] = React.useState(false);
   const theme = useTheme();
 
   const colorMode = React.useMemo(
@@ -68,6 +71,14 @@ export default function ResponsiveDrawer() {
     }),
     [themeMode]
   )
+
+  const handleProjectsOpen = () => {
+    setProjectsOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleGameProjectsOpen = () => {
+    setGameProjectsOpen((prevOpen) => !prevOpen);
+  };
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -153,18 +164,25 @@ export default function ResponsiveDrawer() {
     }
   ];
 
+  function ListItemLink(props: ListItemList) {
+    return (
+      <ListItemButton component={Link} to={props.route}>
+        <ListItemIcon>
+          {props.icon}
+        </ListItemIcon>
+        <ListItemText primary={props.text} />
+      </ListItemButton>
+    );
+  }
+
+
   const listElement = (list: ListItemList[]) => {
     return list.map((item) => (
       <ListItem key={item.text} disablePadding>
 
 
         {item.route.startsWith('/') ? ( // Check if the route starts with '/'
-          <ListItemButton component={Link} to={item.route}>
-            <ListItemIcon>
-              {item.icon}
-            </ListItemIcon>
-            <ListItemText primary={item.text} />
-          </ListItemButton>
+          <ListItemLink text={item.text} route={item.route} icon={item.icon}/>
         ) : (
           <ListItemButton
             component="a" // Use anchor tag for external links
@@ -196,13 +214,27 @@ export default function ResponsiveDrawer() {
         {listElement(listItems)}
       </List>
       <Divider />
-      <List>
-        {listElement(projectListItems)}
-      </List>
+      <Box  onClick={handleProjectsOpen}>
+        <ListItemLink text={'Projects'} route={'/projects'} icon={<CodeIcon />}/>
+      </Box>
+
+      <Collapse component="li" in={projectsOpen} timeout="auto" unmountOnExit>
+        <List  sx={{ p:0, pl: 2 }} >
+          {listElement(projectListItems)}
+        </List>
+      </Collapse>
+
       <Divider />
-      <List>
+      
+      <Box  onClick={handleGameProjectsOpen}>
+        <ListItemLink text={'Game Projects'} route={'/game-projects'} icon={<VideogameAssetIcon />}/>
+      </Box>
+
+      <Collapse component="li" in={gameProjectsOpen} timeout="auto" unmountOnExit>
+        <List  sx={{ p:0, pl: 2 }} >
         {listElement(gameListItems)}
-      </List>
+        </List>
+      </Collapse>
     </div>
   );
 
@@ -282,7 +314,6 @@ export default function ResponsiveDrawer() {
           </Box>
         </Box>
       </Box>
-      
     </Router>
   );
 }
