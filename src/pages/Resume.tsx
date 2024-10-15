@@ -86,6 +86,7 @@ export default function () {
         <h2 id="-additional-information">🌱 Additional Information</h2>
         <ul>
         <li><strong>Interests</strong>: <span><strong>Game development</strong></span>, <span><strong>AI research</strong></span>, <span><strong>modern surrealism</strong></span>.</li>
+        <li><strong>Other Projects</strong>: I am often spending time working on personal projects such as Video Games and Simulation applications.</li>
         </ul>
       </div>
     </Box>

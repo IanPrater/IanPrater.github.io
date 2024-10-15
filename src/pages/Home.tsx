@@ -1,9 +1,8 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography, useTheme } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Link, Typography, useTheme } from '@mui/material';
 
 // Define the Props type including children
 interface ItemCardProps {
   image?: string;
-  age?: number;
   children?: React.ReactNode; // 'children' is optional
 }
 
@@ -60,18 +59,21 @@ export default function () {
 
       <Box flex={0}>
 
+      <Link href="#/projects">
+        <ItemCard image='/images/Projects Square.png'>
+          <Typography variant='h5'>
+            Take a look at some of my projects!
+          </Typography>
+        </ItemCard>
+      </Link>
       
-      <ItemCard image='/images/Projects Square.png'>
-        <Typography variant='h5'>
-          Take a look at some of my projects!
-        </Typography>
-      </ItemCard>
-      
-      <ItemCard image='/images/Games Square.png'>
-        <Typography variant='h5'>
-          Check out my Game Dev projects too!
-        </Typography>
-      </ItemCard>
+      <Link href="#/game-projects">
+        <ItemCard image='/images/Games Square.png'>
+          <Typography variant='h5'>
+            Check out my Game Dev projects too!
+          </Typography>
+        </ItemCard>
+      </Link>
       
       <ItemCard>
         <Typography variant='h5'>

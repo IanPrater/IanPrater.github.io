@@ -34,6 +34,8 @@ import Resume from './pages/Resume';
 import { useTheme } from '@mui/material';
 import { ThemeContext } from './providers/theme-provider';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
+import Projects from './pages/Projects';
+import Game from './pages/Game';
 
 const drawerWidth = 240;
 
@@ -176,11 +178,6 @@ export default function ResponsiveDrawer() {
             <ListItemText primary={item.text} />
           </ListItemButton>
         )}
-
-
-
-
-
       </ListItem>
     ))
   }
@@ -188,9 +185,11 @@ export default function ResponsiveDrawer() {
   const drawer = (
     <div>
       <Toolbar>
+      <ListItemButton  component={Link} to={"/"}>
         <Typography variant="h5">
           Ian Prater
         </Typography>
+      </ListItemButton>
       </Toolbar>
       <Divider />
       <List>
@@ -277,6 +276,8 @@ export default function ResponsiveDrawer() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/game-projects" element={<Game />} />
             </Routes>
           </Box>
         </Box>
