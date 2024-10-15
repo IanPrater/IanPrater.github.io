@@ -187,7 +187,11 @@ export default function ResponsiveDrawer() {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar>
+        <Typography variant="h5">
+          Ian Prater
+        </Typography>
+      </Toolbar>
       <Divider />
       <List>
         {listElement(listItems)}
@@ -225,12 +229,9 @@ export default function ResponsiveDrawer() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Ian Prater
-            </Typography>
-            <Box sx={{flexGrow: 1}}></Box>
+            {/* <Box sx={{flexGrow: 1}}></Box> */}
             <IconButton sx={{ml:1}} onClick={colorMode.toggleColorMode} color='inherit'>
-              {theme.palette.mode === 'dark' ? <Brightness7/> : <Brightness4/>}
+              {theme.palette.mode === 'dark' ? <Brightness4/> : <Brightness7/>}
             </IconButton>
           </Toolbar>
         </AppBar>
