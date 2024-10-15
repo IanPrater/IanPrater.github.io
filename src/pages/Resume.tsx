@@ -27,7 +27,7 @@ export default function () {
       </Link>
 
     
-      <Box style={{ border: '1px solid #ccc', padding: 25}}>
+      <div className='Resume-div' style={{ border: '1px solid #ccc', padding: 25}}>
         <h1 id="-welcome-to-my-resume-website-">👋 Welcome to my resume website!</h1>
         <p>Hi there! I&#39;m <strong>Ian Prater</strong>, a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don&#39;t hesitate to reach out if you&#39;d like to connect!</p>
         <p><a href="mailto:IanLeonardPrater@gmail.com">Contact Me</a></p>
@@ -44,9 +44,9 @@ export default function () {
         <h3 id="software-developer-i">Software Developer I</h3>
         <p><strong>Yellow Corporation</strong><br/><em>October 2020 – July 2023</em>  </p>
         <ul>
-        <li>Collaborated on a large-scale <span><strong>freight management system</strong></span> using <span><strong>Java</strong></span>, <span><strong>Spring Boot</strong></span>, and <span><strong>React</strong></span>.</li>
-        <li>Contributed to the <span><strong>database design</strong></span> and integration for the management of real-time <span><strong>freight data</strong></span> using <span><strong>SQL Server</strong></span>.</li>
-        <li>Worked closely with team members to troubleshoot and resolve system-related <span><strong>issues</strong></span>, ensuring seamless operation.</li>
+        <li>Collaborated on a <span><strong>large-scale</strong></span> freight management system using <span><strong>Java</strong></span> and <span><strong>Spring Boot</strong></span>.</li>
+        <li>Contributed to the <span><strong>database design</strong></span> and integration for the management of real-time freight data using <span><strong>SQL Server</strong></span>.</li>
+        <li>Worked closely with team members to troubleshoot and resolve system-related issues, ensuring seamless operation.</li>
         </ul>
         <h3 id="intern-in-ai-research">Intern in AI Research</h3>
         <p><strong>U.S. Air Force</strong><br/><em>June 2019 – August 2019</em>  </p>
@@ -74,7 +74,8 @@ export default function () {
         <p><strong>University of Central Missouri</strong><br/><em>May 2020</em>  </p>
         <ul>
         <li>Graduated <strong>Summa Cum Laude</strong>  </li>
-        <li>Relevant Coursework: <span><strong>Data Structures</strong></span>, <span><strong>Algorithms</strong></span>, <span><strong>Machine Learning</strong></span>, <span><strong>Database Management</strong></span>, <span><strong>Software Engineering</strong></span></li>
+        <li><span><strong>3.8</strong></span> GPA </li>
+        <li>Relevant Coursework: <span><strong>Data Structures</strong></span>, <span><strong>Algorithms</strong></span>, <span><strong>Database Management</strong></span>, <span><strong>Software Engineering</strong></span></li>
         </ul>
         <h3 id="certifications">Certifications</h3>
         <ul>
@@ -84,10 +85,9 @@ export default function () {
         <hr/>
         <h2 id="-additional-information">🌱 Additional Information</h2>
         <ul>
-        <li><strong>Interests</strong>: <span><strong>Game development</strong></span>, <span><strong>AI research</strong></span>, <span><strong>open-source contributions</strong></span>, <span><strong>modern surrealism</strong></span>.</li>
-        <li><strong>Personality Type</strong>: <span><strong>INTP</strong></span> (Myers-Briggs)</li>
+        <li><strong>Interests</strong>: <span><strong>Game development</strong></span>, <span><strong>AI research</strong></span>, <span><strong>modern surrealism</strong></span>.</li>
         </ul>
-      </Box>
+      </div>
     </Box>
   );
 }
