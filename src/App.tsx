@@ -12,13 +12,14 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import ListItem, { ListItemProps } from '@mui/material/ListItem';
 import ListItemButton, { ListItemButtonProps } from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ForumIcon from '@mui/icons-material/Forum';
 import KitchenIcon from '@mui/icons-material/Kitchen';
 import RocketIcon from '@mui/icons-material/Rocket';
@@ -163,27 +164,34 @@ export default function ResponsiveDrawer() {
     );
   }
 
-
-  const listElement = (list: ListItemList[]) => {
-    return list.map((item) => (
-      <ListItem key={item.text} disablePadding>
-        {item.route.startsWith('/') ? ( // Check if the route starts with '/'
-          <ListItemLink text={item.text} route={item.route} icon={item.icon}/>
-        ) : (
-          <ListItemButton
+  function MyListItem (item: ListItemList) {
+    const [isHovering, setIsHovering] = React.useState(false);
+    return (
+      <Box onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+        <ListItem key={item.text} disablePadding>
+          {item.route.startsWith('/') ? ( // Check if the route starts with '/'
+            <ListItemLink text={item.text} route={item.route} icon={item.icon}/>
+          ) : (
+            <ListItemButton
             component="a" // Use anchor tag for external links
             href={item.route}
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <ListItemIcon>
-              {item.icon}
-            </ListItemIcon>
-            <ListItemText primary={item.text} />
-          </ListItemButton>
-        )}
-      </ListItem>
-    ))
+            >
+              <ListItemIcon>
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.text} />
+              {isHovering ? <OpenInNewIcon fontSize='small'/> : <></>}
+            </ListItemButton>
+          )}
+        </ListItem>
+      </Box>
+    )
+  }
+
+  const listElement = (list: ListItemList[]) => {
+    return list.map(MyListItem)
   }
 
   const drawer = (
