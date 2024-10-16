@@ -6,6 +6,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
+import { useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -46,22 +47,19 @@ interface ListItemList extends ListItemButtonProps{
   route: string
 }
 
-function Router(props: { children?: React.ReactNode }) {
-  const { children } = props;
-  if (typeof window === 'undefined') {
-    return <StaticRouter location="/">{children}</StaticRouter>;
-  }
-
-  return <HashRouter>{children}</HashRouter>;
-}
-
 export default function ResponsiveDrawer() {
+  const location = useLocation();
   const { themeMode, setThemeMode } = React.useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
   const [gameProjectsOpen, setGameProjectsOpen] = React.useState(false);
   const theme = useTheme();
+
+  React.useEffect(() => {
+    setProjectsOpen(location.pathname == '/projects')
+    setGameProjectsOpen(location.pathname == '/game-projects')
+  }, [location]);
 
   const colorMode = React.useMemo(
     () => ({
@@ -71,14 +69,6 @@ export default function ResponsiveDrawer() {
     }),
     [themeMode]
   )
-
-  const handleProjectsOpen = () => {
-    setProjectsOpen((prevOpen) => !prevOpen);
-  };
-
-  const handleGameProjectsOpen = () => {
-    setGameProjectsOpen((prevOpen) => !prevOpen);
-  };
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -179,8 +169,6 @@ export default function ResponsiveDrawer() {
   const listElement = (list: ListItemList[]) => {
     return list.map((item) => (
       <ListItem key={item.text} disablePadding>
-
-
         {item.route.startsWith('/') ? ( // Check if the route starts with '/'
           <ListItemLink text={item.text} route={item.route} icon={item.icon}/>
         ) : (
@@ -214,22 +202,14 @@ export default function ResponsiveDrawer() {
         {listElement(listItems)}
       </List>
       <Divider />
-      <Box  onClick={handleProjectsOpen}>
-        <ListItemLink text={'Projects'} route={'/projects'} icon={<CodeIcon />}/>
-      </Box>
-
+      <ListItemLink text={'Projects'} route={'/projects'} icon={<CodeIcon />}/>
       <Collapse component="li" in={projectsOpen} timeout="auto" unmountOnExit>
         <List  sx={{ p:0, pl: 2 }} >
           {listElement(projectListItems)}
         </List>
       </Collapse>
-
       <Divider />
-      
-      <Box  onClick={handleGameProjectsOpen}>
-        <ListItemLink text={'Game Projects'} route={'/game-projects'} icon={<VideogameAssetIcon />}/>
-      </Box>
-
+      <ListItemLink text={'Game Projects'} route={'/game-projects'} icon={<VideogameAssetIcon />}/>
       <Collapse component="li" in={gameProjectsOpen} timeout="auto" unmountOnExit>
         <List  sx={{ p:0, pl: 2 }} >
         {listElement(gameListItems)}
@@ -240,7 +220,6 @@ export default function ResponsiveDrawer() {
 
 
   return (
-    <Router>
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
         <CssBaseline />
         <AppBar
@@ -314,6 +293,5 @@ export default function ResponsiveDrawer() {
           </Box>
         </Box>
       </Box>
-    </Router>
   );
 }

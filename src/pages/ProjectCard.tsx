@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardMedia, Divider, Typography } from "@
 
 interface ProjectCardProps {
   image?: string;
-  video?: string;
   title: string;
   tags?: string;
   children?: React.ReactNode; // 'children' is optional
@@ -28,15 +27,6 @@ export default function (props: ProjectCardProps) {
           component='img'
           sx={{width: '100%'}}
           image={props.image}
-          />
-          : <></>
-        }
-        {
-          props.video? 
-          <CardMedia
-          component='iframe'
-          sx={{width: '100%'}}
-          src={props.video}
           />
           : <></>
         }
