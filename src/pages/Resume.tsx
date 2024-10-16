@@ -28,8 +28,8 @@ export default function () {
 
     
       <div className='Resume-div' style={{ border: '1px solid #ccc', padding: 25}}>
-        <h1 id="-welcome-to-my-resume-website-">👋 Welcome to my resume website!</h1>
-        <p>Hi there! I&#39;m <strong>Ian Prater</strong>, a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don&#39;t hesitate to reach out if you&#39;d like to connect!</p>
+        <h1 id="-welcome-to-my-resume-website-">Ian Prater</h1>
+        <p>👋 Hi there! I&#39;m a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don&#39;t hesitate to reach out if you&#39;d like to connect!</p>
         <p><a href="mailto:IanLeonardPrater@gmail.com">Contact Me</a></p>
         <hr/>
         <h2 id="-work-experience">💼 Work Experience</h2>
