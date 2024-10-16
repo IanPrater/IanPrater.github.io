@@ -19,7 +19,7 @@ Hi there! I'm **Ian Prater**, a passionate Software Engineer with a strong backg
 ### Software Developer I  
 **Yellow Corporation**  
 *October 2020 – July 2023*  
-- Collaborated on a large-scale <span style="color: #007BFF;">**freight management system**</span> using <span style="color: #007BFF;">**Java**</span>, <span style="color: #007BFF;">**Spring Boot**</span>, and <span style="color: #007BFF;">**React**</span>.
+- Collaborated on a <span style="color: #007BFF;">**large-scale**</span> freight management system using <span style="color: #007BFF;">**Java**</span> and <span style="color: #007BFF;">**Spring Boot**</span>.
 - Contributed to the <span style="color: #007BFF;">**database design**</span> and integration for the management of real-time <span style="color: #007BFF;">**freight data**</span> using <span style="color: #007BFF;">**SQL Server**</span>.
 - Worked closely with team members to troubleshoot and resolve system-related <span style="color: #007BFF;">**issues**</span>, ensuring seamless operation.
 
@@ -52,7 +52,7 @@ Hi there! I'm **Ian Prater**, a passionate Software Engineer with a strong backg
 **University of Central Missouri**  
 *May 2020*  
 - Graduated **Summa Cum Laude**  
-- Relevant Coursework: <span style="color: #007BFF;">**Data Structures**</span>, <span style="color: #007BFF;">**Algorithms**</span>, <span style="color: #007BFF;">**Machine Learning**</span>, <span style="color: #007BFF;">**Database Management**</span>, <span style="color: #007BFF;">**Software Engineering**</span>
+- Relevant Coursework: <span style="color: #007BFF;">**Data Structures**</span>, <span style="color: #007BFF;">**Algorithms**</span>, <span style="color: #007BFF;">**Database Management**</span>, <span style="color: #007BFF;">**Software Engineering**</span>
 
 ### Certifications  
 - <span style="color: #007BFF;">**SQL Training**</span> - The University of Akron, February 2022  
@@ -62,5 +62,4 @@ Hi there! I'm **Ian Prater**, a passionate Software Engineer with a strong backg
 
 ## 🌱 Additional Information
 
-- **Interests**: <span style="color: #007BFF;">**Game development**</span>, <span style="color: #007BFF;">**AI research**</span>, <span style="color: #007BFF;">**open-source contributions**</span>, <span style="color: #007BFF;">**modern surrealism**</span>.
-- **Personality Type**: <span style="color: #007BFF;">**INTP**</span> (Myers-Briggs)
+- **Interests**: <span style="color: #007BFF;">**Game development**</span>, <span style="color: #007BFF;">**AI research**</span>, <span style="color: #007BFF;">**modern surrealism**</span>.
