@@ -3,6 +3,7 @@ import { Box, Card, CardContent, CardMedia, Link, Typography, useTheme } from '@
 // Define the Props type including children
 interface ItemCardProps {
   image?: string;
+  href?: string;
   children?: React.ReactNode; // 'children' is optional
 }
 
@@ -15,10 +16,9 @@ export default function () {
     return (
       <Card sx={{
         m: 5,
-        display: 'flex',
-        maxWidth: '800px'
+        maxWidth: '620px'
       }}>
-
+        <Link href={props.href} sx={{display:'flex', textDecoration:'inherit', color:'inherit'}}>
           <CardContent sx={{
             display: 'flex',
             flexDirection: 'column'
@@ -27,13 +27,13 @@ export default function () {
             {props.children}
             <Box flex={1}/>
           </CardContent>
-        <Box flex={1}/>
-        <CardMedia
-          component='img'
-          sx={{maxWidth: 200, minWidth: 200, height: '100%', flex: 1}}
-          image={props.image}
-        />
-
+          <Box flex={1}/>
+          <CardMedia
+            component='img'
+            sx={{maxWidth: 200, minWidth: 200, height: '100%', flex: 1}}
+            image={props.image}
+          />
+        </Link>
       </Card>
     )
   }
@@ -41,10 +41,10 @@ export default function () {
   return (
     <div style={{flex: 1, display: 'flex', flexDirection: 'column'}}>
       <Typography variant='h2' sx={{mb: 5}}>
-        Welcome to my Webpage!
+        Welcome!
       </Typography>
 
-      <Typography variant='h3'>
+      <Typography variant='h5'>
         <Box component={'span'}>My name is </Box>
         <Box
           component={'strong'}
@@ -58,28 +58,23 @@ export default function () {
       </Typography>
 
       <Box flex={0}>
-
-      <Link href="#/projects">
-        <ItemCard image='/images/Projects Square.png'>
-          <Typography variant='h5'>
-            Take a look at some of my projects!
+        <ItemCard image='/images/Projects Square.png' href="#/projects">
+          <Typography variant='h2' fontWeight={'bold'}>
+            My Projects
           </Typography>
         </ItemCard>
-      </Link>
-      
-      <Link href="#/game-projects">
-        <ItemCard image='/images/Games Square.png'>
-          <Typography variant='h5'>
-            Check out my Game Dev projects too!
+        
+        <ItemCard image='/images/Games Square.png' href="#/game-projects">
+          <Typography variant='h2' fontWeight={'bold'}>
+            Game Dev projects
           </Typography>
         </ItemCard>
-      </Link>
-      
-      <ItemCard>
-        <Typography variant='h5'>
-          Links
-        </Typography>
-      </ItemCard>
+        
+        <ItemCard>
+          <Typography variant='h5'>
+            Links
+          </Typography>
+        </ItemCard>
       </Box>
 
     </div>
