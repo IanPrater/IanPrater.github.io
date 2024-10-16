@@ -19,7 +19,17 @@ export default function () {
         maxWidth: '620px',
         boxShadow: theme.shadows[10]
       }}>
-        <Link href={props.href} sx={{display:'flex', textDecoration:'inherit', color:'inherit'}}>
+        <Link
+          href={props.href}
+          sx={{
+            display:'flex',
+            [theme.breakpoints.down('md')]: {
+              flexDirection:'column',
+            },
+            textDecoration:'inherit',
+            color:'inherit'
+          }}
+        >
           <CardContent sx={{
             display: 'flex',
             flexDirection: 'column'
