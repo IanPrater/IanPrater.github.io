@@ -59,7 +59,7 @@ export default function () {
     </ProjectCard>
   ]
 
-  let numColumns = useMediaQuery(theme.breakpoints.up('sm')) ? 2 : 1
+  let numColumns = useMediaQuery(theme.breakpoints.up('md')) ? 2 : 1
   let output = [];
   for (let index = 0; index < cards.length; index+=numColumns) {
     output.push(
