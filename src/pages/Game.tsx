@@ -1,12 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
 
 export default function () {
+  const theme = useTheme();
   const cards = [
     <ProjectCard
       title="Slag"
       image='/images/Slag.png'
       tags="Unity, C#, Blender "
+      href='https://gamejolt.com/games/Slag/340783'
     >
         Slag was my final project for the Unity course I attended in college. I was the sole developer
         for this project, and I learned vector math and raytracing while building this project.
@@ -25,6 +28,7 @@ export default function () {
       title="Druidic Calamity"
       image='/images/DC.png'
       tags="Unity, C# "
+      href="https://ucm-mules.itch.io/druidic-calamity"
     >
       I was lucky enough to attend Texas A&M's yearly gamejam called Chillennium in 2018. My
       University sent one team of four to the Texas A&M campus to participate. That year's theme
@@ -38,6 +42,7 @@ export default function () {
       title="QWOP-Like game"
       image='/images/qwoplike.png'
       tags="HTML5, CSS3, Javascript, jQuery"
+      href="https://ianriley237.github.io/Game%20Development/QWOPLike/"
     >
        Inspired by the games by Bennete Foddy, I wanted to create a kind of game that was unique
        in the way that the player moved around. In this game, the player moves around by pointing
@@ -46,7 +51,8 @@ export default function () {
     </ProjectCard>
   ]
 
-  let numColumns = 2
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  let numColumns = matches ? 2 : 1
   let output = [];
   for (let index = 0; index < cards.length; index+=numColumns) {
     output.push(

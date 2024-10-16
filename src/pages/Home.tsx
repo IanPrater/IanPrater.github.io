@@ -16,7 +16,8 @@ export default function () {
     return (
       <Card sx={{
         m: 5,
-        maxWidth: '620px'
+        maxWidth: '620px',
+        boxShadow: theme.shadows[10]
       }}>
         <Link href={props.href} sx={{display:'flex', textDecoration:'inherit', color:'inherit'}}>
           <CardContent sx={{
@@ -58,6 +59,13 @@ export default function () {
       </Typography>
 
       <Box flex={0}>
+        
+        <ItemCard href="#/resume">
+          <Typography variant='h2' fontWeight={'bold'}>
+            My Resume
+          </Typography>
+        </ItemCard>
+
         <ItemCard image='/images/Projects Square.png' href="#/projects">
           <Typography variant='h2' fontWeight={'bold'}>
             My Projects
@@ -70,11 +78,11 @@ export default function () {
           </Typography>
         </ItemCard>
         
-        <ItemCard>
+        {/* <ItemCard>
           <Typography variant='h5'>
             Links
           </Typography>
-        </ItemCard>
+        </ItemCard> */}
       </Box>
 
     </div>

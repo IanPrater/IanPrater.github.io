@@ -1,12 +1,15 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
 
 export default function () {
+  const theme = useTheme();
   const cards = [
     <ProjectCard
       title="gato"
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
+      href='http://75.81.136.146/gato/'
     >
         gato is my senior project that I worked on with a partner. We developed the full-stack for the
         project. I was in charge of developing most of the back-end code and processes. This site allows
@@ -32,6 +35,7 @@ export default function () {
       title="Domes"
       image='/images/domes.png'
       tags="HTML5, CSS3, Javascript, PHP, MySQL"
+      href='http://75.81.136.146/Domes/'
     >
         Domes is an E-Commerce website where a user can order many different varieties of hats by placing
         them in their cart. These hats and their details are all stored in a mysql database where data is
@@ -45,6 +49,7 @@ export default function () {
       title="In Browser Orbit Simulator"
       image='/images/Orbit.png'
       tags="HTML5, CSS3, Javascript, jQuery"
+      href="https://ianriley237.github.io/Orbit-Animation/"
     >
         I am fascinated by the ever-expanding cosmos and astrophysics. As an excercise to myself, I wanted
         to explore astrophysics by creating this orbit simulator. My primary goal with this project is to
@@ -54,7 +59,7 @@ export default function () {
     </ProjectCard>
   ]
 
-  let numColumns = 2
+  let numColumns = useMediaQuery(theme.breakpoints.up('sm')) ? 2 : 1
   let output = [];
   for (let index = 0; index < cards.length; index+=numColumns) {
     output.push(
