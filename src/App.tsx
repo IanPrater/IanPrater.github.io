@@ -2,10 +2,8 @@ import * as React from 'react';
 import {
   Route,
   Routes,
-  Link,
-  HashRouter
+  Link
 } from 'react-router-dom';
-import { StaticRouter } from 'react-router-dom/server';
 import { useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
