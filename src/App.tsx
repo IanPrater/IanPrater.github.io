@@ -285,7 +285,7 @@ export default function ResponsiveDrawer() {
         </Box>
         <Box
           component="main"
-          sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, display: 'flex', flexDirection: 'column', height: '100vh', overflowY: 'auto' }}
+          sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, display: 'flex', flexDirection: 'column', height: '100%' }}
         >
           <Toolbar/>
           
