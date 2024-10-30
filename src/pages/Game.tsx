@@ -48,6 +48,11 @@ export default function () {
        in the way that the player moved around. In this game, the player moves around by pointing
        a leg toward a surface, and propelling their foot into the surface to launch their body in
        the desired direction. For now, there is no real goal in the game. It is just a proof of concept.
+       <strong>Controls:</strong>
+       <ul>
+       <li>WASD and IJKL to direct each leg</li>
+       <li>LShift and ; to extend each foot</li>
+       </ul>
     </ProjectCard>
   ]
 
