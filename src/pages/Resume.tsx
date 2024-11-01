@@ -14,7 +14,7 @@ export default function () {
             variant="extended" 
             color="primary"
             sx={{
-              position: 'absolute',
+              position: 'fixed',
               right: '5%',
               bottom: '5%',
               transition: 'all 0.3s ease',
@@ -27,7 +27,7 @@ export default function () {
       </Link>
 
     
-      <div className='Resume-div' style={{ border: '1px solid #ccc', padding: 25}}>
+      <Box className='Resume-div' sx={{ border: '1px solid #ccc', padding: '25px'}}>
         <h1 id="-welcome-to-my-resume-website-">Ian Prater</h1>
         <p>👋 Hi there! I&#39;m a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don&#39;t hesitate to reach out if you&#39;d like to connect!</p>
         <p><a href="mailto:IanLeonardPrater@gmail.com">Contact Me</a></p>
@@ -88,7 +88,9 @@ export default function () {
         <li><strong>Interests</strong>: <span><strong>Game development</strong></span>, <span><strong>AI research</strong></span>, <span><strong>modern surrealism</strong></span>.</li>
         <li><strong>Other Projects</strong>: I am often spending time working on personal projects such as Video Games and Simulation applications.</li>
         </ul>
-      </div>
+      </Box>
+      <Box minHeight={50}>
+      </Box>
     </Box>
   );
 }
