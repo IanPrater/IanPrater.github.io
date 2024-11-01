@@ -22,6 +22,7 @@ export default function () {
       title="Fridge Friend"
       image='/images/FF.png'
       tags="Android Development Kit, Java, XML, SQLite"
+      href='/Fridge Friend.apk'
     >
         Fridge Friend is an Android application I made with a partner that is currently on the play store.
         It allows users to record their food products and the respective expiration dates into an SQLite
