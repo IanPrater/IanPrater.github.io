@@ -6,6 +6,7 @@ interface ProjectCardProps {
   tags?: string;
   href?: string;
   children?: React.ReactNode; // 'children' is optional
+  buttons?: React.ReactElement[];
 }
 
 export default function (props: ProjectCardProps) {
@@ -43,6 +44,9 @@ export default function (props: ProjectCardProps) {
                 : <>Demo Image</>
               }
           </Link>          
+          {
+            props.buttons?.map(button => button)
+          }
           <Typography color="#888888">
             {props.tags}
           </Typography>

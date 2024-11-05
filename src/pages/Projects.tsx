@@ -1,6 +1,8 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
+import OpenIcon from '@mui/icons-material/OpenInNew';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function () {
   const theme = useTheme();
@@ -10,6 +12,11 @@ export default function () {
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
       href='http://75.81.136.146/gato/'
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://75.81.136.146/gato/' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
         gato is my senior project that I worked on with a partner. We developed the full-stack for the
         project. I was in charge of developing most of the back-end code and processes. This site allows
@@ -23,6 +30,11 @@ export default function () {
       image='/images/FF.png'
       tags="Android Development Kit, Java, XML, SQLite"
       href='/Fridge Friend.apk'
+      buttons= {[
+        <Button variant="contained" startIcon={<DownloadIcon/>} sx={{maxWidth: '50%', m:1}} href='/Fridge Friend.apk'>
+          Download APK
+        </Button>
+      ]}
     >
         Fridge Friend is an Android application I made with a partner that is currently on the play store.
         It allows users to record their food products and the respective expiration dates into an SQLite
@@ -37,6 +49,11 @@ export default function () {
       image='/images/domes.png'
       tags="HTML5, CSS3, Javascript, PHP, MySQL"
       href='http://75.81.136.146/Domes/'
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://75.81.136.146/Domes/' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
         Domes is an E-Commerce website where a user can order many different varieties of hats by placing
         them in their cart. These hats and their details are all stored in a mysql database where data is
@@ -51,6 +68,11 @@ export default function () {
       image='/images/Orbit.png'
       tags="HTML5, CSS3, Javascript, jQuery"
       href="https://ianriley237.github.io/Orbit-Animation/"
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='https://ianriley237.github.io/Orbit-Animation/' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
         I am fascinated by the ever-expanding cosmos and astrophysics. As an excercise to myself, I wanted
         to explore astrophysics by creating this orbit simulator. My primary goal with this project is to

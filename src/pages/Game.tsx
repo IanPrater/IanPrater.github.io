@@ -1,6 +1,7 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
+import OpenIcon from '@mui/icons-material/OpenInNew';
 
 export default function () {
   const theme = useTheme();
@@ -10,6 +11,11 @@ export default function () {
       image='/images/Slag.png'
       tags="Unity, C#, Blender "
       href='https://gamejolt.com/games/Slag/340783'
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='https://gamejolt.com/games/Slag/340783' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
         Slag was my final project for the Unity course I attended in college. I was the sole developer
         for this project, and I learned vector math and raytracing while building this project.
@@ -29,6 +35,11 @@ export default function () {
       image='/images/DC.png'
       tags="Unity, C# "
       href="https://ucm-mules.itch.io/druidic-calamity"
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='https://ucm-mules.itch.io/druidic-calamity' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
       I was lucky enough to attend Texas A&M's yearly gamejam called Chillennium in 2018. My
       University sent one team of four to the Texas A&M campus to participate. That year's theme
@@ -43,6 +54,11 @@ export default function () {
       image='/images/qwoplike.png'
       tags="HTML5, CSS3, Javascript, jQuery"
       href="https://ianriley237.github.io/Game%20Development/QWOPLike/"
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='https://ianriley237.github.io/Game%20Development/QWOPLike/' target='_blank'>
+          View Demo
+        </Button>
+      ]}
     >
        Inspired by the games by Bennete Foddy, I wanted to create a kind of game that was unique
        in the way that the player moved around. In this game, the player moves around by pointing
