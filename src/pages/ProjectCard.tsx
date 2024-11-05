@@ -22,28 +22,27 @@ export default function (props: ProjectCardProps) {
           display: 'flex',
           flexDirection: 'column'
         }}>
-        <Link href={props.href}
-        sx={{
-          display:'flex',
-          flexDirection: 'column',
-          textDecoration:'inherit',
-          color:'inherit',
-          '&:hover': {
-            textDecoration: 'inherit', // Prevent underline on hover
-            color: 'inherit',           // Keep the color on hover
-          },
-          }}>
-            {
-              props.image? 
-              <CardMedia
-              component='img'
-              sx={{width: '100%'}}
-              image={props.image}
-              />
-              : <>Demo Image</>
-            }
-        </Link>
-          
+          <Link href={props.href}
+          sx={{
+            display:'flex',
+            flexDirection: 'column',
+            textDecoration:'inherit',
+            color:'inherit',
+            '&:hover': {
+              textDecoration: 'inherit', // Prevent underline on hover
+              color: 'inherit',           // Keep the color on hover
+            },
+            }}>
+              {
+                props.image? 
+                <CardMedia
+                component='img'
+                sx={{width: '100%'}}
+                image={props.image}
+                />
+                : <>Demo Image</>
+              }
+          </Link>          
           <Typography color="#888888">
             {props.tags}
           </Typography>
