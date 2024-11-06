@@ -1,4 +1,4 @@
-import { Box, Button, Tooltip, useMediaQuery } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
 import OpenIcon from '@mui/icons-material/OpenInNew';
@@ -11,15 +11,11 @@ export default function () {
       title="gato"
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
-      //href='http://75.81.136.146/gato/'
+      href='http://75.81.136.146/gato/'
       buttons= {[
-        <Tooltip title='Hosting is paused. Please check back later.'>
-          <span>
-            <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://75.81.136.146/gato/' target='_blank' disabled>
-              View Demo
-            </Button>
-          </span>
-        </Tooltip>
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://75.81.136.146/gato/' target='_blank'>
+          View Demo
+        </Button>
       ]}
     >
         gato is my senior project that I worked on with a partner. We developed the full-stack for the
@@ -52,16 +48,11 @@ export default function () {
       title="Domes"
       image='/images/domes.png'
       tags="HTML5, CSS3, Javascript, PHP, MySQL"
-      //href='http://75.81.136.146/Domes/'
+      href='http://75.81.136.146/Domes/'
       buttons= {[
-        
-        <Tooltip title='Hosting is paused. Please check back later.'>
-          <span>
-            <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://75.81.136.146/Domes/' target='_blank' disabled>
-              View Demo
-            </Button>
-          </span>
-        </Tooltip>
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://75.81.136.146/Domes/' target='_blank'>
+          View Demo
+        </Button>
       ]}
     >
         Domes is an E-Commerce website where a user can order many different varieties of hats by placing
