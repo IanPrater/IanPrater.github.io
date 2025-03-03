@@ -111,7 +111,7 @@ export default function ResponsiveDrawer() {
     {
       text: 'gato',
       icon: <ForumIcon/>,
-      route: 'http://75.81.136.146/gato/'
+      route: 'http://72.128.4.45/gato/'
     },
     {
       text: 'Fridge Friend',
@@ -126,7 +126,7 @@ export default function ResponsiveDrawer() {
     {
       text: 'Domes',
       icon: <SchoolIcon/>,
-      route: 'http://75.81.136.146/Domes/'
+      route: 'http://72.128.4.45/Domes/'
     }
   ];
 

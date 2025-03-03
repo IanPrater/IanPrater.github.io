@@ -11,9 +11,9 @@ export default function () {
       title="gato"
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
-      href='http://75.81.136.146/gato/'
+      href='http://72.128.4.45/gato/'
       buttons= {[
-        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://75.81.136.146/gato/' target='_blank'>
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://72.128.4.45/gato/' target='_blank'>
           View Demo
         </Button>
       ]}
@@ -48,9 +48,9 @@ export default function () {
       title="Domes"
       image='/images/domes.png'
       tags="HTML5, CSS3, Javascript, PHP, MySQL"
-      href='http://75.81.136.146/Domes/'
+      href='http://72.128.4.45/Domes/'
       buttons= {[
-        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://75.81.136.146/Domes/' target='_blank'>
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/Domes/' target='_blank'>
           View Demo
         </Button>
       ]}
