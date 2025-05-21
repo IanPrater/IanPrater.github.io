@@ -27,7 +27,7 @@ export default function () {
       tags="Unreal Engine 5, C++, Blueprints, Multithreading"
       buttons= {[
         <Button variant="contained" startIcon={<DownloadIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/DataDrop.zip'>
-          Download Demo (~1GB)
+          Download Demo (~355MB)
         </Button>
       ]}
     >
