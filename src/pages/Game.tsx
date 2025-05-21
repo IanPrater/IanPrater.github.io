@@ -2,6 +2,7 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
 import OpenIcon from '@mui/icons-material/OpenInNew';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function () {
   const theme = useTheme();
@@ -25,7 +26,7 @@ export default function () {
       image='/images/ProceduralTest.gif'
       tags="Unreal Engine 5, C++, Blueprints, Multithreading"
       buttons= {[
-        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/DataDrop.zip'>
+        <Button variant="contained" startIcon={<DownloadIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/DataDrop.zip'>
           Download Demo
         </Button>
       ]}
