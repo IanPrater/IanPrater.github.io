@@ -9,7 +9,7 @@ export default function () {
     <ProjectCard
       title="Slag"
       image='/images/Slag.png'
-      tags="Unity, C#, Blender "
+      tags="Unity, C#, Blender"
       href='https://gamejolt.com/games/Slag/340783'
       buttons= {[
         <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='https://gamejolt.com/games/Slag/340783' target='_blank'>
@@ -23,7 +23,12 @@ export default function () {
     <ProjectCard
       title="Procedural Generation in UE5"
       image='/images/ProceduralTest.gif'
-      tags="Unreal Engine 5, C++, Blueprints, Multithreading "
+      tags="Unreal Engine 5, C++, Blueprints, Multithreading"
+      buttons= {[
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/DataDrop.zip/' target='_blank'>
+          Download Demo
+        </Button>
+      ]}
     >
       I am currently exploring Unreal Engine 5 with the aspiration to make a complete game to ship.
       I got started by building an endlessly generating realm of cubes for the player to explore.
@@ -33,7 +38,7 @@ export default function () {
     <ProjectCard
       title="Druidic Calamity"
       image='/images/DC.png'
-      tags="Unity, C# "
+      tags="Unity, C#"
       href="https://ucm-mules.itch.io/druidic-calamity"
       buttons= {[
         <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='https://ucm-mules.itch.io/druidic-calamity' target='_blank'>
