@@ -45,25 +45,6 @@ export default function () {
         and navigation. 
     </ProjectCard>,
     <ProjectCard
-      title="Domes"
-      image='/images/domes.png'
-      tags="HTML5, CSS3, Javascript, PHP, MySQL"
-      href='http://72.128.4.45/Domes/'
-      buttons= {[
-        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/Domes/' target='_blank'>
-          View Demo
-        </Button>
-      ]}
-    >
-        Domes is an E-Commerce website where a user can order many different varieties of hats by placing
-        them in their cart. These hats and their details are all stored in a mysql database where data is
-        retrieved by the server. The user interacts with the site by selecting a size and quantity of a
-        particular hat and adding it to their cart. The cart dynamically calculates the total cost of the
-        order as the user adds and removes items from it. Once the user submits their order, shipping
-        information is recorded and stored on the database for a site administrator to view and manage.
-        The site also records trends and statistics related to the orders placed.
-    </ProjectCard>,
-    <ProjectCard
       title="In Browser Orbit Simulator"
       image='/images/Orbit.png'
       tags="HTML5, CSS3, Javascript, jQuery"
