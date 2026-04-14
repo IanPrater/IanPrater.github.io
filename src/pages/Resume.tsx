@@ -33,13 +33,19 @@ export default function () {
         <p><a href="mailto:IanLeonardPrater@gmail.com">Contact Me</a></p>
         <hr/>
         <h2 id="-work-experience">💼 Work Experience</h2>
-        <h3 id="software-engineer-ii">Software Engineer II</h3>
-        <p><strong>Noatum Logistics</strong><br/><em>October 2023 – Present</em>  </p>
+        <h3 id="software-engineer">Software Engineer</h3>
+        <p><strong>Veterans United</strong><br/><em>January 2025 – Present</em>  </p>
         <ul>
-        <li>Contributing to the development and maintenance of <span><strong>enterprise-level web applications</strong></span>, focusing on enhancing <span><strong>performance</strong></span> and optimizing <span><strong>code</strong></span>.</li>
-        <li>Collaborating with <span><strong>cross-functional teams</strong></span> to implement new <span><strong>features</strong></span> and resolve <span><strong>issues</strong></span> across multiple platforms.</li>
-        <li>Working with technologies such as <span><strong>C#</strong></span>, <span><strong>ASP.NET Core</strong></span>, and <span><strong>Kendo UI</strong></span> to improve <span><strong>workflows</strong></span> and <span><strong>user experiences</strong></span>.</li>
-        <li>Assisting in implementing <span><strong>cloud migration strategies</strong></span> to increase <span><strong>scalability</strong></span> and reduce <span><strong>infrastructure costs</strong></span>.</li>
+        <li>Collaborated with the team to develop an internal underwriting application using an <span><strong>Angular front end and C# back end</strong></span>.</li>
+        <li>Worked closely across teams to exchange best practices and improve development processes.</li>
+        </ul>
+        <h3 id="software-engineer-ii">Software Engineer II</h3>
+        <p><strong>Noatum Logistics</strong><br/><em>October 2023 – December 2024</em>  </p>
+        <ul>
+        <li>Contributed to the development and maintenance of <span><strong>enterprise-level web applications</strong></span>, focusing on enhancing <span><strong>performance</strong></span> and optimizing <span><strong>code</strong></span>.</li>
+        <li>Collaborated with <span><strong>cross-functional teams</strong></span> to implement new <span><strong>features</strong></span> and resolve <span><strong>issues</strong></span> across multiple platforms.</li>
+        <li>Worked with technologies such as <span><strong>C#</strong></span>, <span><strong>ASP.NET Core</strong></span>, and <span><strong>Kendo UI</strong></span> to improve <span><strong>workflows</strong></span> and <span><strong>user experiences</strong></span>.</li>
+        <li>Assisted in implementing <span><strong>cloud migration strategies</strong></span> to increase <span><strong>scalability</strong></span> and reduce <span><strong>infrastructure costs</strong></span>.</li>
         </ul>
         <h3 id="software-developer-i">Software Developer I</h3>
         <p><strong>Yellow Corporation</strong><br/><em>October 2020 – July 2023</em>  </p>
