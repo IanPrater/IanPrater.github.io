@@ -26,7 +26,7 @@ export default function () {
       image='/images/ProceduralTest.gif'
       tags="Unreal Engine 5, C++, Blueprints, Multithreading"
       buttons= {[
-        <Button variant="contained" startIcon={<DownloadIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://72.128.4.45/DataDrop.zip'>
+        <Button variant="contained" startIcon={<DownloadIcon/>} sx={{maxWidth: '50%', m:1, textDecoration: 'inherit'}} href='http://75.81.136.42/DataDrop.zip'>
           Download Demo (~355MB)
         </Button>
       ]}

@@ -11,9 +11,9 @@ export default function () {
       title="gato"
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
-      href='http://72.128.4.45/gato/'
+      href='http://75.81.136.42/gato/'
       buttons= {[
-        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://72.128.4.45/gato/' target='_blank'>
+        <Button variant="contained" endIcon={<OpenIcon/>} sx={{maxWidth: '50%', m:1}} href='http://75.81.136.42/gato/' target='_blank'>
           View Demo
         </Button>
       ]}
