@@ -34,7 +34,6 @@ import Resume from './pages/Resume';
 import { Collapse, useTheme } from '@mui/material';
 import { ThemeContext } from './providers/theme-provider';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
-import Projects from './pages/Projects';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 const drawerWidth = 240;
@@ -104,52 +103,6 @@ export default function ResponsiveDrawer() {
     }
   ];
 
-  const projectListItems = [
-    {
-      text: 'gato',
-      icon: <ForumIcon/>,
-      route: 'http://72.128.4.45/gato/'
-    },
-    {
-      text: 'Fridge Friend',
-      icon: <KitchenIcon/>,
-      route: '/'
-    },
-    {
-      text: 'In Browser Orbit Simulator',
-      icon: <RocketIcon/>,
-      route: 'https://ianriley237.github.io/Orbit-Animation/'
-    },
-    {
-      text: 'Domes',
-      icon: <SchoolIcon/>,
-      route: 'http://72.128.4.45/Domes/'
-    }
-  ];
-
-  const gameListItems = [
-    {
-      text: 'Slag',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://gamejolt.com/games/Slag/340783'
-    },
-    {
-      text: 'UE5',
-      icon: <VideogameAssetIcon/>,
-      route: '/'
-    },
-    {
-      text: 'Druidic Calamity',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://ucm-mules.itch.io/druidic-calamity'
-    },
-    {
-      text: 'QWOP-Like',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://ianriley237.github.io/Game%20Development/QWOPLike/'
-    }
-  ];
-
   function ListItemLink(props: ListItemList) {
     return (
       <ListItemButton component={Link} to={props.route}>
@@ -204,18 +157,6 @@ export default function ResponsiveDrawer() {
      <List>
        {listElement(listItems)}
      </List>
-     <Divider />
-     <ListItemLink text={'Projects'} route={'/projects'} icon={<CodeIcon />}/>
-     <Collapse component="li" in={projectsOpen} timeout="auto" unmountOnExit>
-       <List  sx={{ p:0, pl: 2 }} >
-         {listElement(projectListItems)}
-         <Divider sx={{ my: 1 }} />
-         <Typography variant="subtitle2" sx={{ px: 2, py: 1 }}>
-           Game Development Projects
-         </Typography>
-         {listElement(gameListItems)}
-       </List>
-     </Collapse>
    </div>
  );
 
@@ -288,7 +229,6 @@ export default function ResponsiveDrawer() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
             </Routes>
           </Box>
         </Box>
