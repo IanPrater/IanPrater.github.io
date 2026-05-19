@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardMedia, Divider, Link, Typography, useTheme, Chip, Box, Button } from "@mui/material";
+import { Card, CardContent, CardHeader, CardMedia, Divider, Link, Typography, useTheme, Chip, Box } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 interface ProjectCardProps {
@@ -24,7 +24,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
-const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
+const StyledCardMedia = styled(CardMedia)(() => ({
   height: 200,
   objectFit: 'cover',
   transition: 'transform 0.3s ease',

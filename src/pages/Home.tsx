@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Link, Typography, useTheme, Container, Divider, Grid, Button } from '@mui/material';
+import { Box, Typography, useTheme, Container, Divider, Button } from '@mui/material';
 import ProjectCard from './ProjectCard';
 import OpenIcon from '@mui/icons-material/OpenInNew';
 import DownloadIcon from '@mui/icons-material/Download';

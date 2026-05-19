@@ -4,7 +4,6 @@ import {
   Routes,
   Link
 } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -20,21 +19,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ForumIcon from '@mui/icons-material/Forum';
-import KitchenIcon from '@mui/icons-material/Kitchen';
-import RocketIcon from '@mui/icons-material/Rocket';
-import SchoolIcon from '@mui/icons-material/School';
-import CodeIcon from '@mui/icons-material/Code';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
-import { Collapse, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import { ThemeContext } from './providers/theme-provider';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
-import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 const drawerWidth = 240;
 
@@ -45,16 +38,11 @@ interface ListItemList extends ListItemButtonProps{
 }
 
 export default function ResponsiveDrawer() {
-  const location = useLocation();
   const { themeMode, setThemeMode } = React.useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
-  const [projectsOpen, setProjectsOpen] = React.useState(false);
   const theme = useTheme();
 
-  React.useEffect(() => {
-    setProjectsOpen(location.pathname == '/projects')
-  }, [location]);
 
   const colorMode = React.useMemo(
     () => ({
