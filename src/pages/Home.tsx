@@ -5,6 +5,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 export default function () {
   const theme = useTheme();
+  const ip = '75.81.28.12'; // My public IP address, used for hosting some projects on my machine. I will update this if it changes.
 
   // Regular projects data
   const regularProjects = [
@@ -12,7 +13,7 @@ export default function () {
       title="gato"
       image='/images/gato.png'
       tags="HTML5, CSS3, Javascript, jQuery, PHP, MySQL"
-      href='http://75.81.136.42/gato/'
+      href={`http://${ip}/gato/`}
       demoButton={
         <Button
           variant="contained"
@@ -25,7 +26,7 @@ export default function () {
               backgroundColor: theme.palette.primary.dark,
             }
           }}
-          href='http://75.81.136.42/gato/'
+          href={`http://${ip}/gato/`}
           target='_blank'
         >
           View Demo
@@ -147,7 +148,7 @@ export default function () {
               backgroundColor: theme.palette.secondary.dark,
             }
           }}
-          href='http://75.81.136.42/DataDrop.zip'
+          href={`http://${ip}/DataDrop.zip`}
         >
           Download Demo (~355MB)
         </Button>
