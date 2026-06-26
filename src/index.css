@@ -30,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -56,6 +57,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Add some custom styling for project cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -66,5 +78,9 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
   }
 }

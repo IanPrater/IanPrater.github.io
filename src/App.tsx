@@ -4,7 +4,6 @@ import {
   Routes,
   Link
 } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -20,23 +19,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ForumIcon from '@mui/icons-material/Forum';
-import KitchenIcon from '@mui/icons-material/Kitchen';
-import RocketIcon from '@mui/icons-material/Rocket';
-import SchoolIcon from '@mui/icons-material/School';
-import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
-import CodeIcon from '@mui/icons-material/Code';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
-import { Collapse, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import { ThemeContext } from './providers/theme-provider';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
-import Projects from './pages/Projects';
-import Game from './pages/Game';
 
 const drawerWidth = 240;
 
@@ -47,18 +38,11 @@ interface ListItemList extends ListItemButtonProps{
 }
 
 export default function ResponsiveDrawer() {
-  const location = useLocation();
   const { themeMode, setThemeMode } = React.useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
-  const [projectsOpen, setProjectsOpen] = React.useState(false);
-  const [gameProjectsOpen, setGameProjectsOpen] = React.useState(false);
   const theme = useTheme();
 
-  React.useEffect(() => {
-    setProjectsOpen(location.pathname == '/projects')
-    setGameProjectsOpen(location.pathname == '/game-projects')
-  }, [location]);
 
   const colorMode = React.useMemo(
     () => ({
@@ -107,52 +91,6 @@ export default function ResponsiveDrawer() {
     }
   ];
 
-  const projectListItems = [
-    {
-      text: 'gato',
-      icon: <ForumIcon/>,
-      route: 'http://72.128.4.45/gato/'
-    },
-    {
-      text: 'Fridge Friend',
-      icon: <KitchenIcon/>,
-      route: '/'
-    },
-    {
-      text: 'In Browser Orbit Simulator',
-      icon: <RocketIcon/>,
-      route: 'https://ianriley237.github.io/Orbit-Animation/'
-    },
-    {
-      text: 'Domes',
-      icon: <SchoolIcon/>,
-      route: 'http://72.128.4.45/Domes/'
-    }
-  ];
-
-  const gameListItems = [
-    {
-      text: 'Slag',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://gamejolt.com/games/Slag/340783'
-    },
-    {
-      text: 'UE5',
-      icon: <VideogameAssetIcon/>,
-      route: '/'
-    },
-    {
-      text: 'Druidic Calamity',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://ucm-mules.itch.io/druidic-calamity'
-    },
-    {
-      text: 'QWOP-Like',
-      icon: <VideogameAssetIcon/>,
-      route: 'https://ianriley237.github.io/Game%20Development/QWOPLike/'
-    }
-  ];
-
   function ListItemLink(props: ListItemList) {
     return (
       <ListItemButton component={Link} to={props.route}>
@@ -195,34 +133,20 @@ export default function ResponsiveDrawer() {
   }
 
   const drawer = (
-    <div>
-      <Toolbar>
-      <ListItemButton  component={Link} to={"/"}>
-        <Typography variant="h5">
-          Ian Prater
-        </Typography>
-      </ListItemButton>
-      </Toolbar>
-      <Divider />
-      <List>
-        {listElement(listItems)}
-      </List>
-      <Divider />
-      <ListItemLink text={'Projects'} route={'/projects'} icon={<CodeIcon />}/>
-      <Collapse component="li" in={projectsOpen} timeout="auto" unmountOnExit>
-        <List  sx={{ p:0, pl: 2 }} >
-          {listElement(projectListItems)}
-        </List>
-      </Collapse>
-      <Divider />
-      <ListItemLink text={'Game Projects'} route={'/game-projects'} icon={<VideogameAssetIcon />}/>
-      <Collapse component="li" in={gameProjectsOpen} timeout="auto" unmountOnExit>
-        <List  sx={{ p:0, pl: 2 }} >
-        {listElement(gameListItems)}
-        </List>
-      </Collapse>
-    </div>
-  );
+   <div>
+     <Toolbar>
+     <ListItemButton  component={Link} to={"/"}>
+       <Typography variant="h5">
+         Ian Prater
+       </Typography>
+     </ListItemButton>
+     </Toolbar>
+     <Divider />
+     <List>
+       {listElement(listItems)}
+     </List>
+   </div>
+ );
 
 
   return (
@@ -293,8 +217,6 @@ export default function ResponsiveDrawer() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/game-projects" element={<Game />} />
             </Routes>
           </Box>
         </Box>

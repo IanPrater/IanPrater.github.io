@@ -1,35 +1,43 @@
-
-import { Box, Fab, Link } from '@mui/material';
+import { Box, Fab, Link, Container, Typography } from '@mui/material';
 import './resume.css'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 export default function () {
 
 
-
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column'}}>
-      <Link href="/resume.pdf">
-        <Fab 
-            variant="extended" 
-            color="primary"
-            sx={{
-              position: 'fixed',
-              right: '5%',
-              bottom: '5%',
-              transition: 'all 0.3s ease',
-              zIndex: 1000 // Ensures the Fab is visible on top of other content
-            }}
-            >
-          <FileDownloadIcon sx={{ mr: 1 }} />
-          Download PDF
-        </Fab>
-      </Link>
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4}}>
+        <Typography variant="h3" component="h1" gutterBottom align="center" sx={{ fontWeight: 'bold', mb: 2 }}>
+          Ian Prater
+        </Typography>
+        <Typography variant="h6" align="center" sx={{ mb: 3 }}>
+          Passionate Software Engineer with expertise in web development, AI, and game development.
+        </Typography>
+        <Link href="/resume.pdf">
+          <Fab 
+              variant="extended" 
+              color="primary"
+              sx={{
+                transition: 'all 0.3s ease',
+                zIndex: 1000 // Ensures the Fab is visible on top of other content
+              }}
+              >
+            <FileDownloadIcon sx={{ mr: 1 }} />
+            Download PDF
+          </Fab>
+        </Link>
+      </Box>
 
-    
-      <Box className='Resume-div' sx={{ border: '1px solid #ccc', padding: '25px'}}>
+      <Box className='Resume-div' sx={{ 
+        border: '1px solid #ccc', 
+        padding: '25px',
+        borderRadius: '8px',
+        backgroundColor: 'background.paper',
+        boxShadow: 1
+      }}>
         <h1 id="-welcome-to-my-resume-website-">Ian Prater</h1>
-        <p>👋 Hi there! I&#39;m a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don&#39;t hesitate to reach out if you&#39;d like to connect!</p>
+        <p>👋 Hi there! I'm a passionate Software Engineer with a strong background in web development, AI, and game development. Thanks for stopping by—feel free to explore my resume below, and don't hesitate to reach out if you'd like to connect!</p>
         <p><a href="mailto:IanLeonardPrater@gmail.com">Contact Me</a></p>
         <hr/>
         <h2 id="-work-experience">💼 Work Experience</h2>
@@ -58,7 +66,7 @@ export default function () {
         <p><strong>U.S. Air Force</strong><br/><em>June 2019 – August 2019</em>  </p>
         <ul>
         <li>Assisted in research projects involving <span><strong>machine learning</strong></span> and <span><strong>data analysis</strong></span> for defense applications.</li>
-        <li>Developed prototypes for data processing algorithms, contributing to the team&#39;s <span><strong>AI initiatives</strong></span>.</li>
+        <li>Developed prototypes for data processing algorithms, contributing to the team's <span><strong>AI initiatives</strong></span>.</li>
         </ul>
         <h3 id="teaching-assistant">Teaching Assistant</h3>
         <p><strong>University of Central Missouri</strong><br/><em>January 2019 – May 2020</em>  </p>
@@ -72,7 +80,7 @@ export default function () {
         <li><strong>Languages</strong>: <span><strong>Java</strong></span>, <span><strong>C#</strong></span>, <span><strong>JavaScript</strong></span>, <span><strong>TypeScript</strong></span>, <span><strong>Python</strong></span>, <span><strong>SQL</strong></span></li>
         <li><strong>Frameworks</strong>: <span><strong>Spring Boot</strong></span>, <span><strong>React</strong></span>, <span><strong>Vue.js</strong></span>, <span><strong>ASP.NET Core</strong></span></li>
         <li><strong>Tools</strong>: <span><strong>Git</strong></span>, <span><strong>Docker</strong></span>, <span><strong>Jenkins</strong></span>, <span><strong>Postman</strong></span>, <span><strong>Jira</strong></span>, <span><strong>MongoDB</strong></span></li>
-        <li><strong>Development</strong>: <span><strong>Full Stack Web Development</strong></span>, <span><strong>Game Development</strong></span>, <span><strong>AI &amp; Machine Learning</strong></span></li>
+        <li><strong>Development</strong>: <span><strong>Full Stack Web Development</strong></span>, <span><strong>Game Development</strong></span>, <span><strong>AI & Machine Learning</strong></span></li>
         </ul>
         <hr/>
         <h2 id="-education">🎓 Education</h2>
@@ -97,6 +105,6 @@ export default function () {
       </Box>
       <Box minHeight={50}>
       </Box>
-    </Box>
+    </Container>
   );
 }
