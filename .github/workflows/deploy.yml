@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -24,6 +27,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Set up git identity
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
 
       - name: Run deploy
         run: npm run deploy
