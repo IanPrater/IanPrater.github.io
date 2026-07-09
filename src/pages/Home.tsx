@@ -5,7 +5,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 export default function () {
   const theme = useTheme();
-  const ip = '75.81.28.12'; // My public IP address, used for hosting some projects on my machine. I will update this if it changes.
+  const ip = '75.81.133.182'; // My public IP address, used for hosting some projects on my machine. I will update this if it changes.
 
   // Regular projects data
   const regularProjects = [
