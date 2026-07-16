@@ -243,7 +243,7 @@ export default function () {
         >
           Ian Prater
         </Box>
-        , I am a software engineer who enjoys exploring game development and AI.
+        , I am a software engineer who enjoys exploring game development and excellent software.
       </Typography>
 
       <Divider sx={{ mb: 4 }} />
